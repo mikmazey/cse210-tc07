@@ -37,4 +37,6 @@ class InputService:
                 result = "*"
             elif event >= 97 and event <= 122: 
                 result = chr(event)
+            elif event == 8:
+                return "backspace"
         return result
