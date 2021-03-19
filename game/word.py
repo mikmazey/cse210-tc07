@@ -1,4 +1,5 @@
 from game.actor import Actor
+# from actor import Actor
 
 class Word(Actor):
     def __init__(self, word, position, velocity):

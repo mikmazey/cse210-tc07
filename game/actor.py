@@ -1,6 +1,9 @@
 from game import constants
 from game.point import Point
 
+# import constants
+# from point import Point
+
 class Actor:
     """A visible, moveable thing that participates in the game. The responsibility of Actor is to keep track of its appearance, position 
     and velocity in 2d space.
@@ -69,8 +72,12 @@ class Actor:
         y1 = self._position.get_y()
         x2 = self._velocity.get_x()
         y2 = self._velocity.get_y()
-        x = 1 + (x1 + x2 - 1) % (constants.MAX_X - 1)
-        y = 1 + (y1 + y2 - 1) % (constants.MAX_Y - 1)
+
+        x = x1 + x2
+        y = y1 + y2 
+
+        #x = 1 + (x1 + x2 - 1) % (constants.MAX_X - 1)
+        #y = 1 + (y1 + y2 - 1) % (constants.MAX_Y - 1)
         position = Point(x, y)
         self._position = position
     
