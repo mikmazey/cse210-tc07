@@ -1,6 +1,6 @@
-from actor import Actor
-from point import Point
-import constants
+from game.actor import Actor
+from game.point import Point
+from game import constants
 
 class Buffer(Actor):
     def __init__(self):
